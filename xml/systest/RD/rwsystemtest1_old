@@ -1,0 +1,12 @@
+<RWTest>
+  <Function>RWTest</Function>
+  <Testcase>
+    <CaseName>RWTest1</CaseName>
+      <QuoCallMainROpers>
+        <OperationName>READ</OperationName>
+        <OperationValues>
+              <Value></Value>
+        </OperationValues>
+      </QuoCallMainROpers>
+  </Testcase>
+</RWTest>

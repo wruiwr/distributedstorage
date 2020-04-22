@@ -1,0 +1,40 @@
+<Test TestName="SystemTest">
+    <TestCase CaseID="noConnection"></TestCase>
+    <TestCase CaseID="The name of a test driver">
+        <Routine RoutineID="A" OperationName="Read-nil"></Routine>
+        <Routine RoutineID="A" OperationName="Write-nil"></Routine>
+        <Routine RoutineID="A" OperationName="Write">
+            <OperationValues>
+                <Value>7</Value>
+            </OperationValues>
+            <Routine RoutineID="B" OperationName="Read">
+                <OperationValues>
+                    <Value>7</Value>
+                    <Value></Value>
+                </OperationValues>
+            </Routine>
+        </Routine>
+        <Routine RoutineID="A" OperationName="Read">
+            <OperationValues>
+                <Value>7</Value>
+            </OperationValues>
+        </Routine>
+        <Routine RoutineID="A" OperationName="Failure:2-server"></Routine>
+        <Routine RoutineID="A" OperationName="Write">
+            <OperationValues>
+                <Value>8</Value>
+            </OperationValues>
+            <Routine RoutineID="B" OperationName="Read">
+                <OperationValues>
+                    <Value>7</Value>
+                    <Value>8</Value>
+                </OperationValues>
+            </Routine>
+        </Routine>
+        <Routine RoutineID="A" OperationName="Read">
+            <OperationValues>
+                <Value>8</Value>
+            </OperationValues>
+        </Routine>
+    </TestCase>
+</Test>

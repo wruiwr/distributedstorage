@@ -1,0 +1,14 @@
+<Test TestName="SystemTest">
+    <TestCase CaseID="WRsqDR">
+        <Routine RoutineID="A" OperationName="Write">
+            <OperationValues>
+                <Value>7</Value>
+            </OperationValues>
+        </Routine>
+        <Routine RoutineID="A" OperationName="Read">
+            <OperationValues>
+                <Value>7</Value>
+            </OperationValues>
+        </Routine>
+    </TestCase>
+</Test>

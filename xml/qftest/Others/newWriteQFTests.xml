@@ -1,0 +1,27 @@
+<Test TestName="WriteQFTest">
+    <TestCase CaseID="1">
+        <TestValues>
+            <Content>
+                <Response>true</Response>
+            </Content>
+            <Content>
+                <Response>true</Response>
+            </Content>
+        </TestValues>
+        <ExpectResults>
+            <Response>true</Response>
+        </ExpectResults>
+        <ExpectQuorum>true</ExpectQuorum>
+    </TestCase>
+    <TestCase CaseID="2">
+        <TestValues>
+            <Content>
+                <Response>true</Response>
+            </Content>
+        </TestValues>
+        <ExpectResults>
+            <Response>false</Response>
+        </ExpectResults>
+        <ExpectQuorum>false</ExpectQuorum>
+    </TestCase>
+</Test>

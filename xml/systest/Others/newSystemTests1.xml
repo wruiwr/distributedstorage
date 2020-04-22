@@ -1,0 +1,24 @@
+<Test TestName="SystemTest">
+    <TestCase CaseID="The name of a test driver">
+        <Routine RoutineID="A" OperationName="DoWriteCall">
+            <OperationValues>
+                <Value>7</Value>
+            </OperationValues>
+        </Routine>
+        <Routine RoutineID="A" OperationName="DoReadCall">
+            <OperationValues>
+                <Value>7</Value>
+            </OperationValues>
+        </Routine>
+        <Routine RoutineID="A" OperationName="DoWriteCall">
+            <OperationValues>
+                <Value>8</Value>
+            </OperationValues>
+        </Routine>
+        <Routine RoutineID="A" OperationName="DoReadCall">
+            <OperationValues>
+                <Value>8</Value>
+            </OperationValues>
+        </Routine>
+    </TestCase>
+</Test>

@@ -1,0 +1,49 @@
+<Test TestName="ReadQFTest">
+    <TestCase CaseID="1">
+        <TestValues>
+            <Content>
+                <Value>7</Value>
+                <Timestamp>1</Timestamp>
+            </Content>
+            <Content>
+                <Value>7</Value>
+                <Timestamp>1</Timestamp>
+            </Content>
+        </TestValues>
+        <ExpectResults>
+            <Value>7</Value>
+            <Timestamp>1</Timestamp>
+        </ExpectResults>
+        <ExpectQuorum>true</ExpectQuorum>
+    </TestCase>
+    <TestCase CaseID="2">
+        <TestValues>
+            <Content>
+                <Value>7</Value>
+                <Timestamp>1</Timestamp>
+            </Content>
+        </TestValues>
+        <ExpectQuorum>false</ExpectQuorum>
+    </TestCase>
+    <TestCase CaseID="3">
+        <TestValues>
+            <Content>
+                <Value>7</Value>
+                <Timestamp>1</Timestamp>
+            </Content>
+            <Content>
+                <Value>7</Value>
+                <Timestamp>2</Timestamp>
+            </Content>
+            <Content>
+                <Value>7</Value>
+                <Timestamp>3</Timestamp>
+            </Content>
+        </TestValues>
+        <ExpectResults>
+            <Value>7</Value>
+            <Timestamp>3</Timestamp>
+        </ExpectResults>
+        <ExpectQuorum>true</ExpectQuorum>
+    </TestCase>
+</Test>

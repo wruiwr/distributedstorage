@@ -1,0 +1,36 @@
+<Test TestName="SystemTest" SystemSize="3" QuorumSize="2">
+    <TestCase Name="TestNoConnection" Description="Test if no connection is handled"/>
+    <TestCase Name="TestConcurrentReadWriteOps" Description="Concurrent and Sequential read and write operations">
+        <Concurrent>
+            <Operation ID="A" Name="Read" ArgumentType="ReadRequest" Value="">
+                <Reply Type="Value" Value="7"/>
+                <Reply Type="Value" Value=""/>
+            </Operation>
+            <Operation ID="B" Name="Write" ArgumentType="Value" Value="7">
+                <Reply Type="WriteResponse" Value="true"/>
+            </Operation>
+        </Concurrent>
+        <Sequential>
+            <Operation ID="C" Name="Read" ArgumentType="ReadRequest" Value="">
+                <Reply Type="Value" Value="7"/>
+            </Operation>
+            <Operation ID="D" Name="Write" ArgumentType="Value" Value="8">
+                <Reply Type="WriteResponse" Value="true"/>
+            </Operation>
+        </Sequential>
+        <Concurrent>
+            <Operation ID="E" Name="Write" ArgumentType="Value" Value="9">
+                <Reply Type="WriteResponse" Value="true"/>
+            </Operation>
+            <Operation ID="F" Name="Read" ArgumentType="ReadRequest" Value="">
+                <Reply Type="Value" Value="8"/>
+                <Reply Type="Value" Value="9"/>
+            </Operation>
+        </Concurrent>
+        <Sequential>
+            <Operation ID="G" Name="Read" ArgumentType="ReadRequest" Value="">
+                <Reply Type="Value" Value="9"/>
+            </Operation>
+        </Sequential>
+    </TestCase>
+</Test>

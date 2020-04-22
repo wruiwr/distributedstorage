@@ -1,0 +1,33 @@
+<RWTest>
+    <Function>RWTest</Function>
+    <Testcase>
+        <CaseName>Test case MWR-ORR</CaseName>
+        <QuoCallMainROpers>
+            <OperationName>W1routine0</OperationName>
+            <OperationValues>
+                <Value>Rui</Value>
+            </OperationValues>
+            <QuoCallOtherROpers>
+                <OperationName>R1routine1</OperationName>
+                <OperationValues>
+                    <Value>Rui</Value>
+                    <Value></Value>
+                </OperationValues>
+            </QuoCallOtherROpers>
+        </QuoCallMainROpers>
+        <QuoCallMainROpers>
+            <OperationName>R1routine0</OperationName>
+            <OperationValues>
+                <Value>Rui</Value>
+                <Value></Value>
+            </OperationValues>
+            <QuoCallOtherROpers>
+                <OperationName>R2routine1</OperationName>
+                <OperationValues>
+                    <Value>Rui</Value>
+                    <Value></Value>
+                </OperationValues>
+            </QuoCallOtherROpers>
+        </QuoCallMainROpers>
+    </Testcase>
+</RWTest>

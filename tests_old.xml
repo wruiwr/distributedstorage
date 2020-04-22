@@ -1,0 +1,88 @@
+ <Test TestName="SystemTest" SystemSize="3" QuorumSize="2">
+   <TestCase Name="TestNoConnection" Description="Test if no connection is handled"></TestCase>
+   <TestCase Name="TestConcurrentReadWriteOps" Description="Concurrent and Sequential read and write operations">
+     <Operations>
+       <Concurrent>
+         <Operation ID="A" Name="DoReadCall" ArgumentType="ReadRequest">
+           <ExpectedReplies>
+             <Reply Type="Value" Value="7"></Reply>
+             <Reply Type="Value"></Reply>
+           </ExpectedReplies>
+         </Operation>
+         <Operation ID="B" Name="DoWriteCall" ArgumentType="Value" Value="7">
+           <ExpectedReplies>
+             <Reply Type="WriteResponse" Value="true"></Reply>
+           </ExpectedReplies>
+         </Operation>
+       </Concurrent>
+     </Operations>
+     <Operations>
+       <Sequential>
+         <Operation ID="C" Name="DoReadCall" ArgumentType="ReadRequest">
+           <ExpectedReplies>
+             <Reply Type="Value" Value="7"></Reply>
+           </ExpectedReplies>
+         </Operation>
+         <Operation ID="C" Name="DoWriteCall" ArgumentType="Value" Value="8">
+           <ExpectedReplies>
+             <Reply Type="WriteResponse" Value="true"></Reply>
+           </ExpectedReplies>
+         </Operation>
+         <Operation ID="C" Name="ServerFailure" ArgumentType="Value" Value="1"></Operation>
+       </Sequential>
+     </Operations>
+     <Operations>
+       <Concurrent>
+         <Operation ID="A" Name="DoReadCall" ArgumentType="ReadRequest">
+           <ExpectedReplies>
+             <Reply Type="Value" Value="9"></Reply>
+             <Reply Type="Value" Value="8"></Reply>
+           </ExpectedReplies>
+         </Operation>
+         <Operation ID="B" Name="DoWriteCall" ArgumentType="Value" Value="9">
+           <ExpectedReplies>
+             <Reply Type="WriteResponse" Value="true"></Reply>
+           </ExpectedReplies>
+         </Operation>
+       </Concurrent>
+     </Operations>
+     <Operations>
+       <Sequential>
+         <Operation ID="C" Name="DoReadCall" ArgumentType="ReadRequest">
+           <ExpectedReplies>
+             <Reply Type="Value" Value="9"></Reply>
+           </ExpectedReplies>
+         </Operation>
+       </Sequential>
+     </Operations>
+     <Operations>
+       <Concurrent>
+         <Operation ID="A" Name="DoWriteCall" ArgumentType="Value" Value="10">
+           <ExpectedReplies>
+             <Reply Type="WriteResponse" Value="true"></Reply>
+           </ExpectedReplies>
+         </Operation>
+         <Operation ID="B" Name="DoWriteCall" ArgumentType="Value" Value="11">
+           <ExpectedReplies>
+             <Reply Type="WriteResponse" Value="true"></Reply>
+           </ExpectedReplies>
+         </Operation>
+         <Operation ID="C" Name="DoWriteCall" ArgumentType="Value" Value="12">
+           <ExpectedReplies>
+             <Reply Type="WriteResponse" Value="true"></Reply>
+           </ExpectedReplies>
+         </Operation>
+       </Concurrent>
+     </Operations>
+     <Operations>
+       <Sequential>
+         <Operation ID="C" Name="DoReadCall" ArgumentType="ReadRequest">
+           <ExpectedReplies>
+             <Reply Type="Value" Value="10"></Reply>
+             <Reply Type="Value" Value="11"></Reply>
+           </ExpectedReplies>
+         </Operation>
+       </Sequential>
+     </Operations>
+   </TestCase>
+ </Test>
