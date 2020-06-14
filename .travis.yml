@@ -1,0 +1,13 @@
+language: go
+os:
+  - linux
+go:
+  - 1.10.x
+sudo: false
+before_script:
+  - git config --global user.name "wruiwr"
+  - git config --global user.email "wruiwr86@gmail.com"
+script:
+  - go test -coverprofile=coverage.out
+  - go tool cover -func=coverage.out > coveragefunc.out
+  - go tool cover -html=coverage.out
