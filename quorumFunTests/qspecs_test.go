@@ -6,8 +6,10 @@ import (
 	"os"
 	"testing"
 
-	q "github.com/selabhvl/cpnmbt/rwregister"
-	r "github.com/selabhvl/cpnmbt/rwregister/reader"
+	// q "github.com/selabhvl/cpnmbt/rwregister"
+	q "github.com/wruiwr/distributedstorage"
+	// r "github.com/selabhvl/cpnmbt/rwregister/reader"
+	r "github.com/wruiwr/distributedstorage/reader"
 )
 
 var (

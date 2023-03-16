@@ -2,7 +2,8 @@ package quorumFunTests
 
 import (
 	"fmt"
-	q "github.com/selabhvl/cpnmbt/rwregister"
+	// q "github.com/selabhvl/cpnmbt/rwregister"
+	q "github.com/wruiwr/distributedstorage"
 )
 
 const qSize = 2 // assumed quorum size is 2

@@ -15,7 +15,8 @@ import (
 
 	"strconv"
 
-	r "github.com/selabhvl/cpnmbt/rwregister/reader"
+	// r "github.com/selabhvl/cpnmbt/rwregister/reader"
+	r "github.com/wruiwr/distributedstorage/reader"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/grpclog"

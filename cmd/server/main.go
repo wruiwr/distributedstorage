@@ -7,7 +7,8 @@ import (
 	"net"
 	"os"
 
-	qc "github.com/selabhvl/cpnmbt/rwregister"
+	// qc "github.com/selabhvl/cpnmbt/rwregister"
+	qc "github.com/wruiwr/distributedstorage"
 	"google.golang.org/grpc"
 )
 
